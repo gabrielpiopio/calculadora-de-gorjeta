@@ -1,5 +1,6 @@
 let conta = 0
 let pessoas = 0
+let porcentagem = 0
 
 const containput=document.querySelector(".conta input")
 containput.addEventListener("input")
@@ -20,4 +21,13 @@ function receberquantpessoas(evento){
         diverro.setAttribute("id", "")
         pessoas=number(evento.target.value)
     }
+}
+
+const botoesgorjeta=document.querySelectorAll(".gorjeta input[type='button'] ")
+botoesgorjeta.forEach(botao =>{
+    botao.addEventListener("click", receberporcentagem)
+})
+
+function receberporcentagem(){
+    porcentagem=number(evento.target.value) / 100
 }
